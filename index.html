@@ -12,27 +12,24 @@
               background-position: center;">
             </body>
             <section class="header">
+              <h1 style="text-align: center; color: #057296; font-size: 40px; font-family: 'Georgia', serif; margin-top: 20px; text-shadow: 2px 2px 8px #057296;">
+                THE STORY THAT NEVER ENDED
+              </h1>
+              
 
   <!-- NAV BAR at top with logo on left and menu on right -->
-<nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px; position: absolute; top: 0; width: 100%;">
+<nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px; position: absolute; top: -35px; width: 100%;">
   
     <!-- Logo on the left -->
     <a href="indext.html">
       <img src="logo4.jpg" alt="logo" style="width: 100px;">
     </a>
   
-    <!-- Navigation Links on the right -->
-    <ul style="display: flex; gap: 20px; list-style: none; padding: 0; margin: 50px;">
-      <li><a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">HOME</a></li>
-      <li><a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">CHASE</a></li>
-      <li><a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">MORE THAN FRIEND</a></li>
-      <li><a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">RELATIONSHIP</a></li>
-      <li><a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">THE END</a></li>
-    </ul>
+  
   </nav>
   
   <!-- Swift Lyrics below -->
-  <div style="position: absolute; top: 120px; width: 100%; text-align: center;">
+  <div style="position: absolute; top: 80px; width: 100%; text-align: center;">
     <p style="color: white; text-shadow: 1px 1px 5px #057296; font-size: 20px; margin-top: 10px;">
       I know you heard about me<br>
       So hey, let's be friends<br>
@@ -40,6 +37,54 @@
       Grab your passport and my hand<br>
       I can make the bad grls good for a weekend
 
+    
+      <ul style="display: flex; flex-direction: column; align-items: center; gap: 15px; list-style: none; padding: 0; margin: 0;">
+        
+        </li>
+        <li style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); padding: 12px 24px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+          <a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">CHASE</a>
+        </li>
+        <li style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); padding: 12px 24px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+          <a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">MORE THAN FRIEND</a>
+        </li>
+        <li style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); padding: 12px 24px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+          <a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">RELATIONSHIP</a>
+        </li>
+        <li style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); padding: 12px 24px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+          <a href="" style="text-decoration: none; color: #00bfff; font-weight: bold;">THE END</a>
+        </li>
+      </ul>
+
+ <!-- Audio player (hidden) -->
+<audio id="myAudio">
+  <source src="style.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+<!-- Stylish buttons -->
+<div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+  <button onclick="playAudio()" style="padding: 10px 20px; font-weight: bold; background-color: #00bfff; color: white; border: none; border-radius: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s;">▶ dive in</button>
+
+  <button onclick="pauseAudio()" style="padding: 10px 20px; font-weight: bold; background-color: #ff4d4d; color: white; border: none; border-radius: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s;">⏸ nah</button>
+</div>
+
+<!-- Script goes here -->
+<script>
+  const audio = document.getElementById("myAudio");
+
+  function playAudio() {
+    audio.play().catch(e => {
+      alert("Browser blocked autoplay. Tap once anywhere on screen first.");
+      console.log(e);
+    });
+  }
+
+  function pauseAudio() {
+    audio.pause();
+  }
+</script>
+
+      
   
 <!-- Footer credit fixed to bottom-right -->
 <div style="position: fixed; bottom: 10px; right: 20px;">
